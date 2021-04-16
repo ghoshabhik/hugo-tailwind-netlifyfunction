@@ -1,0 +1,56 @@
+{{ define "main"}}
+
+<article class="md:w-1/2 w-full mx-auto md:px-48 px-3 py-10 mt-20 mb-24 text-lg 
+bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-200
+rounded-md shadow-md">
+    <div class="mb-20">
+        <p class="font-semibold text-5xl text-center 
+        bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text
+        ">{{ .Title }}</p>
+    </div>
+    <div class="flex justify-between">
+        <p class="">
+            Reading time: {{ math.Round (div ( countwords .Content) 220.0) }} minutes
+        </p>
+        <div class="">
+            <!-- <div class="article-author  mx-lg-2 px-4">
+            <i class="fas fa-user-circle"></i>
+            {{ .Params.author }}
+        </div> -->
+            <div class="">
+                <span class="flex item-center justify-center">
+
+                    {{ dateFormat .Site.Params.dateFormat .Date }}
+                </span class="flex item-center justify-center">
+                <span class="">
+                    {{ range (.GetTerms "tags") }}
+                    <a href="{{ .Permalink }}">{{ .LinkTitle }} |</a>
+                    {{ end }}
+                </span>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="mt-10">
+        <div class="flex flex-col justify-center text-justify dark:text-gray-200 prose-lg max-w-none" id="content">
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="flex justify-center mt-8">
+        <a id="back-button" class="flex items-center py-2 px-4 rounded-md
+        dark:bg-blue-800 bg-blue-200 text-gray-700 dark:text-gray-200" 
+        href="/posts">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>&nbsp; 
+            <span id="back-button-text">All Posts</span> 
+        </a>
+    </div>
+
+</article>
+
+
+
+{{ end }}

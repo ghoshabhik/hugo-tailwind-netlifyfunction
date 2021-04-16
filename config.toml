@@ -1,0 +1,12 @@
+baseURL = "https://ghoshabhik.github.io/"
+languageCode = "en-us"
+title = "Home"
+paginate = 300
+
+[params]
+dateFormat = "Jan 2, 2006"
+googleAnalyticsID = "G-QDF9PMWZKR"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

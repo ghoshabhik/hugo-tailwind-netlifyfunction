@@ -1,0 +1,117 @@
+{{ define "main"}}
+
+<section class="md:w-4/5 w-full mx-auto">
+    <div class="flex flex-col items-start justify-center 
+    my-8 py-20 md:px-56 space-y-10 w-full
+    bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-200
+    rounded-md shadow-md">
+        <div class="">
+            {{ range $index, $pages:= .Paginator.Pages }}
+
+            <div class="px-2">
+                <article class="my-12">
+                    <div class="my-2">
+                        <h3 class="text-3xl font-semibold">
+                            {{ $currentUrl := urls.Parse .Permalink }}
+                            {{ if in $currentUrl.Path "/projects/"}}
+                            <a class="hover:text-blue-500" href="{{.Params.githubUrl}}" target="_blank">
+                                <i class="fab fa-github project-icon"></i>
+                            </a>
+                            {{end}}
+                            <a class="hover:text-blue-500" href="{{ .Permalink}}">
+                                {{ .Title }}
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {{ math.Round (div ( countwords .Content) 220.0) }} minutes Read
+                    </div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center items-start justify-start">
+                        <span class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {{ dateFormat .Site.Params.dateFormat .Date }}
+                        </span>
+                        <span class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                            </svg>
+                            {{ range (.GetTerms "tags") }}
+                            <a class="ml-2" href="{{ .Permalink }}">{{ .LinkTitle }} |</a>
+                            {{ end }}
+                        </span>
+                    </div>
+                    <div class="my-2">
+                        {{ .Params.description }}
+                    </div>
+                    <a class="inline-block my-3 font-medium text-blue-800 dark:text-blue-200" href="{{ .Permalink}}" >Read more → </a>
+                </article>
+            </div>
+
+            {{ end }}
+        </div>
+        {{ template "_internal/pagination.html" .}}
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-5
+    my-8 px-3 py-5 md:px-56
+    bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-200
+    rounded-md shadow-md">
+        {{ $url := urls.Parse .Permalink }}
+
+        {{ if eq "/projects/" $url.Path }}
+        {{ $posts := where .Site.Pages "Type" "projects" }}
+
+        {{range $name, $taxonomy := .Site.Taxonomies.tags }}
+
+        {{ $.Scratch.Set "tagCounter" 0 }}
+        {{range $posts}}
+
+        {{if in .Params.tags $name}}
+        {{$.Scratch.Add "tagCounter" 1}}
+        {{end}}
+
+        {{end}}
+        {{if ne ($.Scratch.Get "tagCounter") 0}}
+        <div class="">
+            <a href="/tags/{{$name}}">{{$name}} ({{ $.Scratch.Get "tagCounter" }})</a>
+        </div>  
+        {{end}}
+        {{end}}
+        {{ end }}
+
+
+        {{ if eq "/posts/" $url.Path }}
+        {{ $posts := where .Site.Pages "Type" "posts" }}
+
+        {{range $name, $taxonomy := .Site.Taxonomies.tags }}
+
+        {{ $.Scratch.Set "tagCounter" 0 }}
+        {{range $posts}}
+
+        {{if in .Params.tags $name}}
+        {{$.Scratch.Add "tagCounter" 1}}
+        {{end}}
+
+        {{end}}
+        {{if ne ($.Scratch.Get "tagCounter") 0}}
+        <div class="">
+            <a href="/tags/{{$name}}">{{$name}} ({{ $.Scratch.Get "tagCounter" }}) </a>
+        </div>  
+        {{end}}
+        {{end}}
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

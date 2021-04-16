@@ -1,0 +1,20 @@
+{
+  "name": "hugo-tailwind-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwind build src/css/index.css -o static/css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
+    "tailwindcss": "^2.1.1"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.4.0"
+  }
+}

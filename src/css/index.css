@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#content a{
+    /* color: rgb(28,169,162); */
+    @apply text-blue-800 dark:text-blue-200;
+}
+
+#content blockquote{
+    /* color: rgb(28,169,162); */
+    @apply pl-6 pr-3 border-l-8 border-gray-300 dark:border-gray-600;
+}
