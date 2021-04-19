@@ -1,6 +1,6 @@
 {{ define "main"}}
 
-<article class="md:w-1/2 w-full mx-auto md:px-48 px-3 py-10 mt-20 mb-24 text-lg 
+<article class="md:w-3/5 w-full mx-auto md:px-48 px-3 py-10 mt-20 mb-24 text-lg 
 bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-200
 rounded-md shadow-md">
     <div class="mb-20">
@@ -37,7 +37,7 @@ rounded-md shadow-md">
             {{ .Content }}
         </div>
     </div>
-    <div class="flex justify-center mt-8">
+    <div class="flex flex-col justify-center items-center mt-8">
         <a id="back-button" class="flex items-center py-2 px-4 rounded-md
         dark:bg-blue-800 bg-blue-200 text-gray-700 dark:text-gray-200" 
         href="/posts">
@@ -47,6 +47,8 @@ rounded-md shadow-md">
             </svg>&nbsp; 
             <span id="back-button-text">All Posts</span> 
         </a>
+        <a class="inline-block my-5 py-2 px-4 rounded-md
+        dark:bg-blue-800 bg-blue-200 text-gray-700 dark:text-gray-200" href="/about#contact-form">Please send me a note</a>
     </div>
 
 </article>
