@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project on Home</title>
+    <link>https://ghoshabhik.github.io/tags/project/</link>
+    <description>Recent content in project on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Mar 2021 20:16:13 +0530</lastBuildDate><atom:link href="https://ghoshabhik.github.io/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello</title>
+      <link>https://ghoshabhik.github.io/projects/project1/</link>
+      <pubDate>Sun, 07 Mar 2021 20:16:13 +0530</pubDate>
+      
+      <guid>https://ghoshabhik.github.io/projects/project1/</guid>
+      <description>Something very nice!!</description>
+    </item>
+    
+    <item>
+      <title>My Second Project</title>
+      <link>https://ghoshabhik.github.io/projects/project2/</link>
+      <pubDate>Sun, 07 Mar 2021 20:16:13 +0530</pubDate>
+      
+      <guid>https://ghoshabhik.github.io/projects/project2/</guid>
+      <description>Hello this is a test Way to cool
+ Dorothy followed her through many of the beautiful rooms in her castle.
+The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood. At the command prompt, type nano.
+  First item   Second item   Third item Fourth item   199  System.out.println(&amp;#34;Hi&amp;#34;);   My favorite search engine is Duck Duck Go.</description>
+    </item>
+    
+  </channel>
+</rss>

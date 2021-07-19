@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>article on Home</title>
+    <link>https://ghoshabhik.github.io/categories/article/</link>
+    <description>Recent content in article on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Mar 2021 20:16:13 +0530</lastBuildDate><atom:link href="https://ghoshabhik.github.io/categories/article/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, World</title>
+      <link>https://ghoshabhik.github.io/posts/hello-world/</link>
+      <pubDate>Wed, 17 Mar 2021 20:16:13 +0530</pubDate>
+      
+      <guid>https://ghoshabhik.github.io/posts/hello-world/</guid>
+      <description>Who am I  I am a Data Solution Architect with over 13 years of experience in software engineering. I have led design, development and management of IT Solution for many fortune five hundred companies, SMBs and startups during my service in this industry.
+I am commited to help organizations achieve maximum benefits from their technology investments and push their IT operational boundaries. I have helped several customers discovering their wealth in data, monitizing and setting up analytical platforms, in cloud migration journey and simplifying legacy systems integration while keeping their data and infrastructure secured than ever before.</description>
+    </item>
+    
+    <item>
+      <title>Hello2 this is to make the heading long, making it more long...</title>
+      <link>https://ghoshabhik.github.io/posts/page3/</link>
+      <pubDate>Sun, 07 Mar 2021 20:16:13 +0530</pubDate>
+      
+      <guid>https://ghoshabhik.github.io/posts/page3/</guid>
+      <description>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;rsquo;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;rsquo;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</description>
+    </item>
+    
+    <item>
+      <title>Hello This is a test to see how the title scales up and how much it grows</title>
+      <link>https://ghoshabhik.github.io/posts/post2/</link>
+      <pubDate>Fri, 05 Mar 2021 20:16:13 +0530</pubDate>
+      
+      <guid>https://ghoshabhik.github.io/posts/post2/</guid>
+      <description>Hello! There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&amp;rsquo;t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn&amp;rsquo;t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</description>
+    </item>
+    
+  </channel>
+</rss>
